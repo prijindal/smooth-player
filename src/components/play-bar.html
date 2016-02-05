@@ -1,0 +1,33 @@
+<dom-module id="play-bar">
+  <style>
+    :host {
+      min-height: 80px;
+      background-color: #333333;
+      color: #ffffff;
+    }
+  </style>
+  <template>
+    <div class="playing-title flex center">
+      <span>{{track.title}}</span>
+    </div>
+    <div class="flex row around">
+      <div class="flex row shrink">
+        Controls
+      </div>
+      <div class="progress flex row expand center">
+        <span>Progress</span>
+      </div>
+      <div class="flex row shrink">
+        Shuffle
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is:'play-bar',
+      properties:{
+        track:Object
+      }
+    })
+  </script>
+</dom-module>

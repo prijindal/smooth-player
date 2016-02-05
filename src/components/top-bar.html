@@ -1,0 +1,26 @@
+<dom-module id="top-bar">
+  <style>
+    :host {
+      background-color: #333333;
+      color: #ffffff;
+    }
+  </style>
+  <template>
+    <div class="flex row expand">
+      <div class="menu flex shrink">
+        Menu Buttons
+      </div>
+      <div class="title flex row expand center">
+        <span>Title</span>
+      </div>
+      <div class="buttons flex shrink">
+        Buttons
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is:'top-bar'
+    })
+  </script>
+</dom-module>

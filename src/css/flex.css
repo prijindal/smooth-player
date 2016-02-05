@@ -1,0 +1,39 @@
+/* TODO: Make rather a nice scss mixin*/
+
+.flex {
+  display: flex;
+}
+
+.flex.row {
+  flex-flow: row wrap;
+}
+
+.flex.column {
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+.flex.center {
+  justify-content: center;
+}
+
+.flex.start {
+  justify-content: flex-start;
+}
+.flex.end {
+  justify-content: flex-end;
+}
+
+.flex.around {
+  justify-content: space-around;
+}
+.flex.between {
+  justify-content: space-between;
+}
+
+.flex.expand {
+  flex:1 1 auto;
+}
+.flex.shrink {
+  flex:0 0 auto;
+}

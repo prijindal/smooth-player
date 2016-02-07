@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
 
     <link rel="import" href="components.html">
 
@@ -15,7 +16,7 @@
   </head>
   <body ng-app="music.app">
     <div class="container flex column" ng-controller="appController as app">
-      <top-bar class="flex shrink"></top-bar>
+      <top-bar class="flex shrink" menu={{app.menubar}} track="{{app.track}}"></top-bar>
       <div class="mainview flex expand row">
         <side-bar class="flex column" menu="{{app.sidemenu}}"></side-bar>
         <div ui-view class="pageview flex column expand">

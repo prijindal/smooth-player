@@ -1,0 +1,22 @@
+<dom-module id="font-icon">
+  <template>
+    <i id="i"></i>
+  </template>
+  <script>
+    Polymer({
+      is:'font-icon',
+      properties:{
+        icon:String,
+        faicon:{
+          computed:'_computedValue(icon)'
+        }
+      },
+      _computedValue:function(icon) {
+        var fa = 'fa-' + icon
+        this.$.i.classList.add('fa')
+        this.$.i.classList.add(fa)
+        return fa
+      }
+    })
+  </script>
+</dom-module>

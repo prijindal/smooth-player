@@ -1,0 +1,29 @@
+<link rel="import" href="../../icon/font-icon.html">
+
+<dom-module id="button-icon">
+  <style>
+    :host {
+      display: flex;
+      justify-content: center;
+      min-height: 15px;
+      min-width: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      margin:0 10px;
+    }
+    :host:hover {
+      color: #aaaaaa;
+    }
+  </style>
+  <template>
+    <font-icon icon="{{icon}}"></font-icon>
+  </template>
+  <script>
+    Polymer({
+      is:'button-icon',
+      properties:{
+        icon:String
+      }
+    })
+  </script>
+</dom-module>

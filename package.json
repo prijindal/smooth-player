@@ -2,10 +2,13 @@
   "name": "music-player",
   "version": "0.0.0",
   "description": "An electron based music player",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "node test.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  }
 }

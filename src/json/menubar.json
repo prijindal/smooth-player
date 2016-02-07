@@ -1,0 +1,14 @@
+[
+  {
+    "title":"File",
+    "items":[{
+        "title":"Add File"
+      },
+      {
+        "title":"Add Folder"
+      }]
+  },
+  {
+    "title":"Settings"
+  }
+]

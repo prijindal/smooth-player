@@ -1,0 +1,22 @@
+<dom-module id="title-bar">
+  <style>
+
+  </style>
+  <template>
+    <div class="title flex row center">{{fulltitle}}</div>
+  </template>
+  <script>
+    Polymer({
+      is:'title-bar',
+      properties:{
+        track:Object,
+        fulltitle:{
+          computed:'_computedName(track)'
+        }
+      },
+      _computedName(track) {
+        return track.title +' by ' + track.artist
+      }
+    })
+  </script>
+</dom-module>

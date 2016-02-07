@@ -1,0 +1,21 @@
+<link rel="import" href="button/button-icon.html">
+
+<dom-module id="button-bar">
+  <style>
+    :host {
+      padding-right: 10px;
+    }
+  </style>
+  <template>
+    <div class="flex row">
+      <button-icon icon="minus"></button-icon>
+      <button-icon icon="desktop"></button-icon>
+      <button-icon icon="times"></button-icon>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is:'button-bar'
+    })
+  </script>
+</dom-module>

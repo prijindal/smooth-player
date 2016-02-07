@@ -1,26 +1,34 @@
+<link rel="import" href="topbar/menu-bar.html">
+<link rel="import" href="topbar/title-bar.html">
+<link rel="import" href="topbar/button-bar.html">
+
 <dom-module id="top-bar">
   <style>
     :host {
       background-color: #333333;
-      color: #ffffff;
+      color: rgba(255,255,255,0.87);
+      -webkit-user-select: none;
+      padding: 5px;
+      font-size: 15px;
     }
   </style>
   <template>
     <div class="flex row expand">
-      <div class="menu flex shrink">
-        Menu Buttons
-      </div>
-      <div class="title flex row expand center">
-        <span>Title</span>
-      </div>
-      <div class="buttons flex shrink">
-        Buttons
-      </div>
+      <menu-bar class="flex shrink" menu="{{menu}}"></menu-bar>
+      <title-bar class="flex column expand center" track="{{track}}"></title-bar>
+      <button-bar class="flex shrink column center"></button-bar>
     </div>
   </template>
   <script>
     Polymer({
-      is:'top-bar'
+      is:'top-bar',
+      properties:{
+        menu:Object,
+        track:{
+          type:Object,
+          notify:true
+        }
+      }
     })
   </script>
 </dom-module>

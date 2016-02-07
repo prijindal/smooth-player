@@ -1,0 +1,54 @@
+<dom-module id="menu-item">
+  <style>
+      :host {
+        -webkit-app-region: no-drag
+      }
+      .title {
+        min-height: 25px;
+        min-width: 80px;
+        margin: 0 5px;
+      }
+      .title span {
+        text-align: center;
+      }
+      .title:hover {
+        background-color:#607D8B;
+      }
+      .content {
+        position: fixed;
+        background: #333333;
+        opacity: 0.9;
+        min-width: 200px;
+        padding: 5px;
+      }
+  </style>
+  <template>
+    <div class="title flex center column" on-tap="toggleContent">
+      <span>{{menubar.title}}</span>
+    </div>
+    <template is="dom-if" if="{{content}}">
+      <div class="content">
+        <template is="dom-repeat" items="{{menubar.items}}">
+          <menu-item menubar="{{item}}"></menu-item>
+        </template>
+      </div>
+    </template>
+  </template>
+  <script>
+    Polymer({
+      is:'menu-item',
+      properties:{
+        menubar:Object
+      },
+      attached:function() {
+        this.content = false
+      },
+      toggleContent:function() {
+        if(typeof this.menubar.items=="undefined" || this.menubar.items.length == 0) {
+          return console.log('Performing Action');
+        }
+        this.content = !this.content
+      }
+    })
+  </script>
+</dom-module>

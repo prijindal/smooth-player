@@ -1,0 +1,20 @@
+<link rel="import" href="menu/menu-item.html">
+
+<dom-module id="menu-bar">
+  <style>
+
+  </style>
+  <template>
+    <template is="dom-repeat" items="{{menu}}">
+      <menu-item menubar="{{item}}"></menu-item>
+    </template>
+  </template>
+  <script>
+    Polymer({
+      is:'menu-bar',
+      properties:{
+        menu:Object
+      }
+    })
+  </script>
+</dom-module>

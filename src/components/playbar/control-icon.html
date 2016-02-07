@@ -1,0 +1,24 @@
+<dom-module id="control-icon">
+  <style>
+    font-icon {
+        margin:0 10px;
+        font-size: 20px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    font-icon:hover {
+      color: #cccccc;
+    }
+  </style>
+  <template>
+    <font-icon icon="{{icon}}"></font-icon>
+  </template>
+  <script>
+    Polymer({
+      is:'control-icon',
+      properties:{
+        icon:String
+      }
+    })
+  </script>
+</dom-module>

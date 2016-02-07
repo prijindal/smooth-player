@@ -1,0 +1,50 @@
+<dom-module id="progress-bar">
+  <style>
+    :host {
+      width: 80%;
+    }
+    .progress-bar {
+      display: block;
+    }
+    .progress {
+      display: block;
+      height: 10px;
+      position: relative;
+    }
+    .progress.total {
+      width: 100px;
+      background: #555555;
+      top:8px;
+    }
+    .progress.fill {
+      width: 100px;
+      background: #cccccc;
+      top:-2px;
+    }
+  </style>
+  <template>
+    <div class="progress-bar">
+      <div id="total" class="progress total"></div>
+      <div id="filled" class="progress fill"></div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is:'progress-bar',
+      properties:{
+        total:String,
+        filled:String,
+        refresh:{
+          computed:'_computedRefresh(filled, total)'
+        }
+      },
+      _computedRefresh:function(filled, total) {
+        console.log(filled, total);
+        this.$.total.style.width = total
+        this.$.filled.style.width = filled
+        console.dir(this.$.filled)
+        return ;
+      }
+    })
+  </script>
+</dom-module>

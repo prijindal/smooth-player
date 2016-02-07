@@ -1,0 +1,19 @@
+<dom-module id="track-title">
+  <template>
+    <span>{{fullTitle}}</span>
+  </template>
+  <script>
+    Polymer({
+      is:'track-title',
+      properties:{
+        track:Object,
+        fullTitle:{
+          computed:'_computeFullTitle(track)'
+        }
+      },
+      _computeFullTitle(track) {
+        return track.title + ' - ' + track.artist
+      }
+    })
+  </script>
+</dom-module>

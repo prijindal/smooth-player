@@ -1,3 +1,8 @@
+<link rel="import" href="playbar/track-title.html">
+<link rel="import" href="playbar/track-controls.html">
+<link rel="import" href="playbar/track-progress.html">
+<link rel="import" href="playbar/play-controls.html">
+
 <dom-module id="play-bar">
   <style>
     :host {
@@ -5,21 +10,18 @@
       background-color: #333333;
       color: #ffffff;
     }
+    @media (max-width: 700px) {
+      .bottom-play {
+        flex-flow: column wrap;
+      }
+    }
   </style>
   <template>
-    <div class="playing-title flex center">
-      <span>{{track.title}}</span>
-    </div>
-    <div class="flex row around">
-      <div class="flex row shrink">
-        Controls
-      </div>
-      <div class="progress flex row expand center">
-        <span>Progress</span>
-      </div>
-      <div class="flex row shrink">
-        Shuffle
-      </div>
+    <track-title class="flex center" track="{{track}}"></track-title>
+    <div class="bottom-play flex around">
+      <track-controls class="flex row shrink center"></track-controls>
+      <track-progress class="flex row expand center"></track-progress>
+      <play-controls class="flex row shrink center"></play-controls>
     </div>
   </template>
   <script>

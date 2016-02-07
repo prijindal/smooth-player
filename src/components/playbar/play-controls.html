@@ -1,0 +1,19 @@
+<link rel="import" href="volume-controls.html">
+
+<dom-module id="play-controls">
+  <style>
+    :host {
+      margin-right: 20px;
+    }
+  </style>
+  <template>
+    <control-icon icon="random"></control-icon>
+    <control-icon icon="repeat"></control-icon>
+    <volume-controls></volume-controls>
+  </template>
+  <script>
+    Polymer({
+      is:'play-controls'
+    })
+  </script>
+</dom-module>

@@ -1,0 +1,27 @@
+<progress-bar></progress-bar>
+<link rel="import" href="../progress/progress-bar.html">
+
+<dom-module id="volume-controls">
+  <style>
+    :host {
+      margin:0 10px;
+      font-size: 20px;
+    }
+    progress-bar {
+      margin-left: 10px;
+    }
+  </style>
+  <template>
+    <div class="flex row">
+      <font-icon icon="volume-off"></font-icon>
+      <!-- <font-icon icon="volume-down"></font-icon>
+      <font-icon icon="volume-up"></font-icon> -->
+      <progress-bar total="100px" filled="20px"></progress-bar>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is:'volume-controls'
+    })
+  </script>
+</dom-module>

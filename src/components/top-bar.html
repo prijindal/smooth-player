@@ -12,6 +12,11 @@
       font-size: 15px;
       -webkit-app-region: drag;
     }
+    @media (max-width:500px) {
+      :host > div {
+        flex-direction: column-reverse !important;
+      }
+    }
   </style>
   <template>
     <div class="flex row expand">

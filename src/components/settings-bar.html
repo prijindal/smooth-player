@@ -1,0 +1,24 @@
+<dom-module id="settings-bar">
+  <style>
+    :host {
+      min-height: 30px;
+      background-color: #4CAF50;
+      color: rgba(0,0,0,0.87);
+    }
+  </style>
+  <template>
+    <div class="flex row center">
+      <div class="filter-text">
+        Filter:&nbsp;
+      </div>
+      <div class="filter-input">
+        <input placeholder="Enter A Search Parameter"/>
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is:'settings-bar'
+    })
+  </script>
+</dom-module>

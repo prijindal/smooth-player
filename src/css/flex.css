@@ -5,11 +5,11 @@
 }
 
 .flex.row {
-  flex-flow: row wrap;
+  flex-direction: row;
 }
 
 .flex.column {
-  flex-flow: column nowrap;
+  flex-direction: column;
   align-items: stretch;
 }
 
@@ -36,4 +36,11 @@
 }
 .flex.shrink {
   flex:0 0 auto;
+}
+
+.flex.wrap {
+  flex-wrap: wrap;
+}
+.flex.nowrap {
+  flex-wrap: nowrap;
 }

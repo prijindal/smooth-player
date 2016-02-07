@@ -8,13 +8,47 @@
     }
   </style>
   <template>
-    <div class="time first">0:30</div>
-    <progress-bar total="100%" filled="10%"></progress-bar>
-    <div class="time last">5:00</div>
+    <div class="time first">{{pivotString}}</div>
+    <progress-bar total="100%" filled="{{filled}}"></progress-bar>
+    <div class="time last">{{totalString}}</div>
   </template>
   <script>
     Polymer({
-      is:'track-progress'
+      is:'track-progress',
+      properties:{
+        track:Object,
+        pivotString:{
+          computed:'_computePivot(track)'
+        },
+        totalString:{
+          computed:'_computeTotal(track)'
+        },
+        filled:{
+          computed:'_computeFilled(track)'
+        }
+      },
+      _computePivot:function(track) {
+        if(track.pivot > track.total) return '0:00';
+        return this._intToTime(track.pivot)
+      },
+      _computeTotal: function(track) {
+        return this._intToTime(track.total)
+      },
+      _computeFilled: function(track) {
+        var str = track.pivot*100/track.total
+        if(str>100) return ;
+        return str + '%'
+      },
+      _intToTime: function(int) {
+        var str = parseInt(int/60)
+        str+=':'
+        var sec = int%60
+        if(sec<10) {
+          sec='0' + sec
+        }
+        str+=sec
+        return str
+      }
     })
   </script>
 </dom-module>

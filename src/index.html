@@ -19,8 +19,11 @@
       <top-bar class="flex shrink" menu={{app.menubar}} track="{{app.track}}"></top-bar>
       <div class="mainview flex expand row">
         <side-bar class="flex column" menu="{{app.sidemenu}}"></side-bar>
-        <div ui-view class="pageview flex column expand">
-          <loading-page></loading-page>
+        <div class="flex column expand">
+          <settings-bar class="flex shrink column center"></settings-bar>
+          <div ui-view class="pageview flex column expand">
+            <loading-page></loading-page>
+          </div>
         </div>
       </div>
       <play-bar class="flex column around shrink" track="{{app.track}}"></play-bar>

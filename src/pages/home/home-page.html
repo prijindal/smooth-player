@@ -1,0 +1,20 @@
+<link rel="import" href="../../components/song-grid.html">
+
+<dom-module id="home-page">
+  <style>
+    :host {
+      margin:5px;
+    }
+  </style>
+  <template>
+    <song-grid class="flex row wrap center"></song-grid>
+  </template>
+  <script>
+    Polymer({
+      is:'home-page',
+      properties:{
+        home:Object
+      }
+    })
+  </script>
+</dom-module>

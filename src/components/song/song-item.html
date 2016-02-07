@@ -1,0 +1,25 @@
+<dom-module id="song-item">
+  <style>
+    :host {
+      margin:10px;
+    }
+    .title {
+      font-size: 15px;
+      color:#111111;
+    }
+    .artist {
+      font-size: 10px;
+      color:#999999;
+    }
+  </style>
+  <template>
+    <img src="/build/text.png"/>
+    <div class="title flex row center">Title</div>
+    <div class="artist flex row center">Artist</div>
+  </template>
+  <script>
+    Polymer({
+      is:'song-item'
+    })
+  </script>
+</dom-module>

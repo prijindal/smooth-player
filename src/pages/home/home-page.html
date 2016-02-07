@@ -1,13 +1,10 @@
-<link rel="import" href="../../components/song-grid.html">
+<link rel="import" href="../../components/song/song-grid.html">
+<link rel="import" href="../../components/song/song-list.html">
 
 <dom-module id="home-page">
-  <style>
-    :host {
-      margin:5px;
-    }
-  </style>
   <template>
-    <song-grid class="flex row wrap center"></song-grid>
+    <!-- <song-grid class="flex row wrap center"></song-grid> -->
+    <song-list></song-list>
   </template>
   <script>
     Polymer({

@@ -1,0 +1,27 @@
+<dom-module id="song-list-item">
+  <style>
+    :host > div:hover {
+      background: #E0F7FA;
+    }
+    :host > div:active,
+    :host > div:focus {
+      background: #B2EBF2;
+    }
+    .field {
+      border-right:1px solid #ffffff;
+      min-width: 120px;
+      padding-left:5px;
+    }
+  </style>
+  <template>
+    <div class="flex row expand">
+      <div class="field flex row start">Title</div>
+      <div class="field flex row start">Artist</div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is:'song-list-item'
+    })
+  </script>
+</dom-module>

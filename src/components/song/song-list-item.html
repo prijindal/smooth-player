@@ -9,13 +9,16 @@
     }
     .field {
       border-right:1px solid #ffffff;
-      min-width: 120px;
       padding-left:5px;
+      overflow: hidden;
+      max-width: 120px;
+      min-width: 120px;
+      white-space: nowrap;
     }
   </style>
   <template>
     <div class="flex row expand">
-      <div class="field flex row start">Title</div>
+      <div class="field flex row start">A big title of a song</div>
       <div class="field flex row start">Artist</div>
     </div>
   </template>

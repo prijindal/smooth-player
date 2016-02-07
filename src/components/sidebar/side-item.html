@@ -1,11 +1,18 @@
 <dom-module id="side-item">
   <style>
     :host {
-      margin-left: 20px;
       line-height: 20px;
+      font-size: 15px;
+      padding-top:5px;
+      padding-bottom: 5px;
+      cursor: pointer;
+    }
+    :host:hover {
       font-size: 20px;
-      padding-top:4px;
-      padding-bottom: 4px;
+    }
+    :host.bold {
+      font-weight: bold;
+      font-size: 25px;
     }
   </style>
   <template>
@@ -13,7 +20,17 @@
   </template>
   <script>
     Polymer({
-      is:'side-item'
+      is:'side-item',
+      properties:{
+        item:Object,
+        bold:{
+          computed:'isbold(item)'
+        }
+      },
+      isbold:function(item) {
+        this.classList.add(item.selected ? 'bold' : 'light')
+        return item.selected
+      }
     })
   </script>
 </dom-module>

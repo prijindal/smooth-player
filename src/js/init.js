@@ -13,7 +13,7 @@ Module.controller('appController', function($scope, $http) {
   var self = this
 
   // Make a service for this
-  self.track = {title:'Title'}
+  self.track = {title:'Title',artist:'Artist'}
 
   // Make a service for this
   $http.get('./json/sidemenu.json')

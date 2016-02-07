@@ -1,14 +1,26 @@
 [
   {
-    "name":"Collections"
+    "title":"My Music",
+    "items":[{
+        "name":"Collection"
+      },
+      {
+        "name":"Now Playing",
+        "selected":true
+      },
+      {
+        "name":"Recently Added"
+      },
+      {
+        "name":"History"
+      }]
   },
   {
-    "name":"Now Playing"
-  },
-  {
-    "name":"Playlists"
-  },
-  {
-    "name":"Recently Added"
+    "title":"Playlists",
+    "items":[{
+        "name":"Favourites"
+      },{
+        "name":"Add New Playlist"
+      }]
   }
 ]

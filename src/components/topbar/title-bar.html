@@ -1,7 +1,4 @@
 <dom-module id="title-bar">
-  <style>
-
-  </style>
   <template>
     <div class="title flex row center">{{fulltitle}}</div>
   </template>
@@ -15,7 +12,7 @@
         }
       },
       _computedName(track) {
-        return track.title +' by ' + track.artist
+        return track.title +' by ' + track.artist + ' - Smooth'
       }
     })
   </script>
